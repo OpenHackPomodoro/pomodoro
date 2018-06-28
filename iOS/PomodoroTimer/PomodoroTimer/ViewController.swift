@@ -14,9 +14,20 @@ class ViewController: UIViewController {
     var progress: KDCircularProgress!
     var count:Int = 0
     var rawText:String = ""
+    
+    // these code are example code
+    var totalTimeInSec:Double?
+    var timer : Timer?
+    var timeInSec = 60.0
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // this code are example code
+        timeInSec = totalTimeInSec!
+        
         
         progress = KDCircularProgress(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
         progress.startAngle = -90
@@ -59,6 +70,7 @@ class ViewController: UIViewController {
                     self.count = tmp1
                     self.count += 1
                     print(self.count)
+                    
                 }
             } else {
                 print("animation stopped, was interrupted")
@@ -69,8 +81,6 @@ class ViewController: UIViewController {
     @IBAction func animatePauseBtn(_ sender: Any) {
         progress.pauseAnimation()
     }
-    @IBAction func animateStopBtn(_ sender: Any) {
-        progress.stopAnimation()
-    }
+    
 }
 
