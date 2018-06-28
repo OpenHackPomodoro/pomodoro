@@ -39,6 +39,25 @@ router.post('/group', (req, res, next) => {
       console.log(e);
       res.json({ "result": false });
     });
+});
+
+router.get('/group', (req, res, next) => {
+  query(`SELECT _g.group_name, _g.isPrivate FROM _group _g , group_member m
+          WHERE _g.gid = m.gid AND m.user_id = ?`, [req.query.uid])
+    .then(r => res.json(r))
+    .catch(e => {
+      console.log(e);
+      res.json({ "result": false });
+    });
+})
+
+router.post('/group/member', (req, res, next) => {
+  query(`INSERT INTO group_member(gid, user_id) VALUES(?, ?)`, [req.query.gid, req.query.uid])
+    .then(r => res.json({ "result": true }))
+    .catch(e => {
+      console.log(e);
+      res.json({ "result": false });
+    });
 })
 
 
