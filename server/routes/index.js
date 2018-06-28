@@ -1,9 +1,46 @@
 var express = require('express');
 var router = express.Router();
+var mysql = require('mysql');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'ehqps2m7',
+  database: 'pomodoro',
 });
 
+const query = (...args) => {
+  return new Promise((resolve, reject) => {
+    connection.query(...args, (err, rows) => {
+      if(err) reject(err);
+      else resolve(rows);
+    })
+  });
+};
+
+/* GET home page. */
+router.post('/pomodoro/complete', function(req, res, next) {
+  console.log(req.query);
+  query(`INSERT INTO pomodoro(user_id, timeout, date, gid, isPrivate) VALUES(?, ?, ?, ?, ?)`,
+    [req.query.id, req.query.duration, new Date(), req.query.gid, false])
+    .then(r => res.json({ "result": true }))
+    .catch(e => {
+      console.log(e);
+      res.json({ "result": false });
+    });
+});
+
+router.post('/group', (req, res, next) => {
+  query(`INSERT INTO _group(isPrivate, group_name) VALUES(?, ?)`, 
+    [req.query.isPrivate === 'false' ? false : true, req.query.group_name])
+    .then(r => query(`INSERT INTO group_member(gid, user_id) VALUES(?, ?)`, [r.insertId, req.query.uid]))
+    .then(r => res.json({ "result": true }))
+    .catch(e => {
+      console.log(e);
+      res.json({ "result": false });
+    });
+})
+
+
 module.exports = router;
+
