@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (4.7.2)
+  - KDCircularProgress (1.5.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - KDCircularProgress
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - KDCircularProgress
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  KDCircularProgress: 12f677b2deb02409ab48c6cae1898d146b8ad549
+
+PODFILE CHECKSUM: 0278575181efadbd856aa5b0c595f6e1d91e2646
+
+COCOAPODS: 1.5.3
