@@ -158,8 +158,8 @@ class ViewController: UIViewController {
         timeInSec -= 1
         if timeInSec == -1{
             timeInSec = Double(totalTimeInSec!)
-            self.progress.set(colors: UIColor.yellow)
-            
+//            self.progress.set(colors: UIColor.yellow)
+            self.progress.progressColors = [UIColor.yellow]
             
             print("휴식뽀모 시작")
             self.PomoCountLabel.text = "1"
@@ -169,14 +169,16 @@ class ViewController: UIViewController {
             }))
             self.present(alert, animated: true, completion: nil)
             
-            totalTimeInSec = 300
+            
         }
         
         let newAngleValue = Double(newAngle())
         
         progress.animate(toAngle: newAngleValue, duration: 0.5, completion: nil)
         let (_,m,s) = secondsToHoursMinutesSeconds(seconds: Int(timeInSec))
-        
+        if timeInSec == -1 {
+            totalTimeInSec = 300
+        }
         timerLabel.text = "\(m) : \(s)"
     }
     
