@@ -74,6 +74,10 @@
                                     <outlet property="delegate" destination="60o-qn-IxU" id="IfX-iN-7I4"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wpn-MI-oUh">
+                                <rect key="frame" x="289" y="532" width="76" height="76"/>
+                                <state key="normal" image="fab"/>
+                            </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C0W-da-GYS">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -83,10 +87,15 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Oir-bk-xPC" firstAttribute="trailing" secondItem="Wpn-MI-oUh" secondAttribute="trailing" constant="10" id="kDU-ng-Id2"/>
+                            <constraint firstItem="Oir-bk-xPC" firstAttribute="bottom" secondItem="Wpn-MI-oUh" secondAttribute="bottom" constant="10" id="p5y-UI-BXd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Oir-bk-xPC"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="내 포모도로" image="file-text" id="DX1-0t-UgZ"/>
                     <connections>
+                        <outlet property="fabButton" destination="Wpn-MI-oUh" id="pfb-lm-65b"/>
                         <outlet property="myTableView" destination="gUA-hE-ecg" id="KNJ-od-l63"/>
                     </connections>
                 </viewController>
@@ -109,23 +118,37 @@
             </objects>
             <point key="canvasLocation" x="3945" y="-52"/>
         </scene>
-        <!--Setting-->
+        <!--리포트-->
         <scene sceneID="CFu-od-C9C">
             <objects>
-                <viewController id="lQr-oG-dRZ" sceneMemberID="viewController">
+                <viewController id="lQr-oG-dRZ" customClass="ReportViewController" customModule="Pomodoro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qAv-gF-lBX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yWy-pU-BFV">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4Tb-8v-cea"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Setting" id="jQ6-UM-kRM"/>
+                    <tabBarItem key="tabBarItem" title="리포트" image="trending-up" id="jQ6-UM-kRM"/>
+                    <connections>
+                        <outlet property="webView" destination="yWy-pU-BFV" id="ATU-QW-rTX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="roE-n2-BJG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2772" y="629"/>
+            <point key="canvasLocation" x="2772" y="628.33583208395805"/>
         </scene>
-        <!--Item-->
+        <!--함께하기-->
         <scene sceneID="zv2-sF-T1U">
             <objects>
                 <viewController id="yjt-h4-RyE" sceneMemberID="viewController">
@@ -135,29 +158,62 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="RXq-I0-T1a"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="fMV-1P-hAG"/>
+                    <tabBarItem key="tabBarItem" title="함께하기" image="users" id="fMV-1P-hAG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zQh-ib-Acc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2068" y="1032"/>
         </scene>
-        <!--Item-->
+        <!--설정-->
         <scene sceneID="7Ly-wL-1mj">
             <objects>
-                <viewController id="sln-7q-c7a" sceneMemberID="viewController">
+                <viewController id="sln-7q-c7a" customClass="SettingViewController" customModule="Pomodoro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0PW-o6-Fxk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fwM-FD-ggb">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="설정" id="JQ6-pC-4gN"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S9o-c5-EkO">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="WE2-cZ-48d" style="IBUITableViewCellStyleDefault" id="Jn5-QP-23A">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jn5-QP-23A" id="fmU-oo-Ex2">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="프로필 수정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WE2-cZ-48d">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="T9g-E0-AMI"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="rmM-dD-cBW"/>
+                    <tabBarItem key="tabBarItem" title="설정" image="settings" id="rmM-dD-cBW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G4K-CG-bmQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2185" y="2023"/>
+            <point key="canvasLocation" x="2184.8000000000002" y="2022.6386806596704"/>
         </scene>
-        <!--Main-->
+        <!--홈-->
         <scene sceneID="God-oT-2rm">
             <objects>
                 <viewController id="pWL-hc-AwY" sceneMemberID="viewController">
@@ -167,16 +223,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="TI6-63-7wP"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Main" id="nPw-eG-fxH"/>
+                    <tabBarItem key="tabBarItem" title="홈" image="home" id="nPw-eG-fxH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bmO-ho-3cr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2780" y="-700"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tabbar Controller-->
         <scene sceneID="IaD-po-loO">
             <objects>
-                <tabBarController id="0Tk-kl-EGg" sceneMemberID="viewController">
+                <tabBarController id="0Tk-kl-EGg" customClass="TabbarController" customModule="Pomodoro" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TbN-qq-EZM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -196,7 +252,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="fab" width="76" height="76"/>
         <image name="file-text" width="18" height="22"/>
+        <image name="home" width="20" height="22"/>
+        <image name="settings" width="24" height="24"/>
         <image name="shape" width="12" height="12"/>
+        <image name="trending-up" width="24" height="14"/>
+        <image name="users" width="24" height="20"/>
     </resources>
 </document>

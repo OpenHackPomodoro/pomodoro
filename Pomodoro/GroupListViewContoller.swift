@@ -45,6 +45,8 @@ class MyListViewController: UIViewController, UITableViewDataSource, UITableView
         
     }
     
+    @IBOutlet weak var fabButton: UIButton!
+    
     func layoutFAB() {
         let item = FloatyItem()
         item.buttonColor = UIColor.blue
