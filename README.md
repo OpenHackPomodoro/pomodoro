@@ -19,4 +19,8 @@ Pomodoro is a iOS timer app helps you achieve your own goals and makes you motiv
 ## How to start
 ```
 git clone https://github.com/OpenHackPomodoro/pomodoro.git
+
+cd iOS
+
+pod install
 ```
