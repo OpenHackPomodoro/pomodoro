@@ -99,7 +99,14 @@ class ViewController: UIViewController {
             timer!.invalidate()
             timerButton.setTitle("Start", for: [])
 //            progress.animateFromAngle(progress.angle, toAngle: 0, duration: 0.5, completion: nil)
-            progress.animate(fromAngle: progress.angle, toAngle: 0, duration: 0.5, completion: nil)
+            progress.animate(fromAngle: progress.angle, toAngle: 0, duration: 0.5) { completed in
+                if completed{
+                    //animate 끝났을 때
+                }
+                else {
+                    //animate 비정상적 종료
+                }
+            }
         }
     }
     func resetCounter () {
@@ -112,7 +119,9 @@ class ViewController: UIViewController {
     @IBOutlet var timerLabel: UILabel!
     
     @objc func changeLabelText() {
-        
+        if timeInSec == 0{
+            timeInSec = Double(totalTimeInSec!)
+        }
         timeInSec -= 1
         
         let newAngleValue = Double(newAngle())
