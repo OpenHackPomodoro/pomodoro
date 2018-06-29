@@ -41,5 +41,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>Fonts provided by applications</key>
+	<string>Spoqa Han Sans Regular.ttf</string>
 </dict>
 </plist>

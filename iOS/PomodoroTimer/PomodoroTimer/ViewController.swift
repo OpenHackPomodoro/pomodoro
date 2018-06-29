@@ -65,31 +65,6 @@ class ViewController: UIViewController {
 
     @IBOutlet var PomoCount: UILabel!
     
-    
-//   @IBAction func animatePlayBtn(_ sender: Any) {
-//        progress.animate(fromAngle: 0, toAngle: 360, duration: 5) { completed in
-//            if completed {
-//                //                print("animation stopped, completed")
-//                //                self.count = Int(self.PomoCount.text!)!
-//                print(self.PomoCount.text)
-//                if let rawText1 = self.PomoCount.text {
-//                    print(rawText1)
-//                    self.rawText = rawText1
-//                }
-//                if let tmp1 = Int(self.rawText){
-//
-//                    self.count = tmp1
-//                    self.count += 1
-//                    print(self.count)
-//
-//                }
-//                self.timeInSec = 30
-//            } else {
-//                print("animation stopped, was interrupted")
-//            }
-//        }
-//    }
-    
     @IBOutlet var PomoCountLabel: UILabel!
     @IBOutlet var timerButton: UIButton!
     @IBAction func timerAction(_ sender: UIButton) {
@@ -157,9 +132,9 @@ class ViewController: UIViewController {
         
         timeInSec -= 1
         if timeInSec == -1{
-            timeInSec = Double(totalTimeInSec!)
-//            self.progress.set(colors: UIColor.yellow)
-            self.progress.progressColors = [UIColor.yellow]
+//            timeInSec = Double(totalTimeInSec!)
+            let myYellow = UIColor(red:1.00, green:0.77, blue:0.38, alpha:1.0)
+            self.progress.progressColors = [myYellow]
             
             print("휴식뽀모 시작")
             self.PomoCountLabel.text = "1"
@@ -169,7 +144,6 @@ class ViewController: UIViewController {
             }))
             self.present(alert, animated: true, completion: nil)
             
-            
         }
         
         let newAngleValue = Double(newAngle())
@@ -178,6 +152,7 @@ class ViewController: UIViewController {
         let (_,m,s) = secondsToHoursMinutesSeconds(seconds: Int(timeInSec))
         if timeInSec == -1 {
             totalTimeInSec = 300
+            timeInSec = 300
         }
         timerLabel.text = "\(m) : \(s)"
     }
@@ -191,14 +166,8 @@ class ViewController: UIViewController {
     }
 
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-//        if let timerData = getFromUserDefault(key: "Timer") {
-//            self.totalTimeInSec = Double(timerData)! * 60.0
-//        } else {
-//            self.totalTimeInSec = 60.0
-//            saveToUserDefault(key: "Timer", value: "(1)")
-//        }
-        self.totalTimeInSec = 30
-    }
+//    required init?(coder aDecoder: NSCoder) {
+//        super.init(coder: aDecoder)
+//        self.totalTimeInSec = 30
+//    }
 }

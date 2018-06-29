@@ -13,6 +13,7 @@
 		9F396D6620E553CC001AB873 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F396D6420E553CC001AB873 /* Main.storyboard */; };
 		9F396D6820E553CD001AB873 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F396D6720E553CD001AB873 /* Assets.xcassets */; };
 		9F396D6B20E553CD001AB873 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F396D6920E553CD001AB873 /* LaunchScreen.storyboard */; };
+		9F396D7320E6A4F1001AB873 /* Spoqa Han Sans Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F396D7220E6A4C9001AB873 /* Spoqa Han Sans Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		9F396D6720E553CD001AB873 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F396D6A20E553CD001AB873 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F396D6C20E553CD001AB873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F396D7220E6A4C9001AB873 /* Spoqa Han Sans Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Spoqa Han Sans Regular.ttf"; path = "../../../../../Downloads/SpoqaHanSans_original/SpoqaHanSans_original/Spoqa Han Sans Regular.ttf"; sourceTree = "<group>"; };
 		CECB300A3E82E5E6F5517B11 /* Pods-PomodoroTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomodoroTimer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PomodoroTimer/Pods-PomodoroTimer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,7 @@
 				9F396D6720E553CD001AB873 /* Assets.xcassets */,
 				9F396D6920E553CD001AB873 /* LaunchScreen.storyboard */,
 				9F396D6C20E553CD001AB873 /* Info.plist */,
+				9F396D7220E6A4C9001AB873 /* Spoqa Han Sans Regular.ttf */,
 			);
 			path = PomodoroTimer;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F396D7320E6A4F1001AB873 /* Spoqa Han Sans Regular.ttf in Resources */,
 				9F396D6B20E553CD001AB873 /* LaunchScreen.storyboard in Resources */,
 				9F396D6820E553CD001AB873 /* Assets.xcassets in Resources */,
 				9F396D6620E553CC001AB873 /* Main.storyboard in Resources */,
@@ -360,7 +364,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8ZMC86H7GX;
 				INFOPLIST_FILE = PomodoroTimer/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = bbvch13531.PomodoroTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -376,7 +383,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8ZMC86H7GX;
 				INFOPLIST_FILE = PomodoroTimer/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = bbvch13531.PomodoroTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
