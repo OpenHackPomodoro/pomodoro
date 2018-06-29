@@ -8,4 +8,5 @@ target 'PomodoroTimer' do
   # Pods for PomodoroTimer
   pod 'KDCircularProgress'
   pod 'Alamofire'
+  pod 'PopupDialog', '~> 0.7'
 end

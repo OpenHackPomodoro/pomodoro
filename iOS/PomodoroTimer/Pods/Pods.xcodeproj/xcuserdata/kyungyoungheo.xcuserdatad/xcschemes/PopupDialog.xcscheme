@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F0EE26105D2FC2D7EC423BCB74B5451A"
-               BlueprintName = "Pods-PomodoroTimer"
+               BlueprintIdentifier = "C6B288FA0680A72C572B0F82F2376BBD"
+               BlueprintName = "PopupDialog"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "Pods-PomodoroTimer.framework">
+               BuildableName = "PopupDialog.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

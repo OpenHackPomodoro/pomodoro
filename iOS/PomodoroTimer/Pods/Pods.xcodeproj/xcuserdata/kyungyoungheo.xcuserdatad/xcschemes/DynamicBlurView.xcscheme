@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F0EE26105D2FC2D7EC423BCB74B5451A"
-               BlueprintName = "Pods-PomodoroTimer"
+               BlueprintIdentifier = "9AD6E417B292CCB529632F0FA6F2EFEC"
+               BlueprintName = "DynamicBlurView"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "Pods-PomodoroTimer.framework">
+               BuildableName = "DynamicBlurView.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
