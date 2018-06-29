@@ -88,8 +88,9 @@ class ViewController: UIViewController {
     @IBOutlet var timerButton: UIButton!
     @IBAction func timerAction(_ sender: UIButton) {
         //get time of textField
-        timeInSec = Double(getTimeFromTextField())
-        print(timeInSec)
+        
+        totalTimeInSec = Double(getTimeFromTextField())
+        
         if sender.titleLabel!.text == "Start" {
             resetCounter()
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.changeLabelText), userInfo: nil, repeats: true)
