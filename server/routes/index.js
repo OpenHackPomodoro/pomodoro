@@ -78,5 +78,15 @@ router.get('/pomodoro', (req, res, next) => {
     });
 })
 
+
+router.get('/group/search', (req, res, next) => {
+  query(`SELECT * FROM _group WHERE group_name LIKE "%${req.query.group_name}%"`)
+    .then(r => res.json(r))
+    .catch(e => {
+      console.log(e);
+      res.json({"result": false, "error": e});
+    });
+})
+
 module.exports = router;
 
