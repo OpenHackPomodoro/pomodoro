@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7A88136C8A9D1BDAC03DEA1 /* Pods_Pomodoro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B05DFAE193F14F7CBF18248F /* Pods_Pomodoro.framework */; };
 		F0403BEF20E5489100671ED4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0403BEE20E5489100671ED4 /* AppDelegate.swift */; };
 		F0403BF120E5489100671ED4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0403BF020E5489100671ED4 /* ViewController.swift */; };
 		F0403BF420E5489100671ED4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0403BF220E5489100671ED4 /* Main.storyboard */; };
 		F0403BF620E5489200671ED4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0403BF520E5489200671ED4 /* Assets.xcassets */; };
 		F0403BF920E5489200671ED4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0403BF720E5489200671ED4 /* LaunchScreen.storyboard */; };
 		F0403C0120E54BCF00671ED4 /* GroupListViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0403C0020E54BCF00671ED4 /* GroupListViewContoller.swift */; };
+		F0FB161620E6376D00F58475 /* FloatyWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FB161020E6376C00F58475 /* FloatyWindow.swift */; };
+		F0FB161720E6376D00F58475 /* FloatyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FB161120E6376C00F58475 /* FloatyManager.swift */; };
+		F0FB161820E6376D00F58475 /* FloatyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FB161220E6376C00F58475 /* FloatyItem.swift */; };
+		F0FB161920E6376D00F58475 /* FloatyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FB161320E6376C00F58475 /* FloatyViewController.swift */; };
+		F0FB161A20E6376D00F58475 /* Floaty.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FB161420E6376C00F58475 /* Floaty.swift */; };
+		F0FB161B20E6376D00F58475 /* FloatyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FB161520E6376C00F58475 /* FloatyDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B05DFAE193F14F7CBF18248F /* Pods_Pomodoro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pomodoro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8A954837E6F6244C48822EF /* Pods-Pomodoro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pomodoro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pomodoro/Pods-Pomodoro.debug.xcconfig"; sourceTree = "<group>"; };
 		F0403BEB20E5489100671ED4 /* Pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0403BEE20E5489100671ED4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0403BF020E5489100671ED4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +33,14 @@
 		F0403BF820E5489200671ED4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0403BFA20E5489200671ED4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0403C0020E54BCF00671ED4 /* GroupListViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListViewContoller.swift; sourceTree = "<group>"; };
+		F0FB160F20E6376C00F58475 /* Floaty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Floaty.h; sourceTree = "<group>"; };
+		F0FB161020E6376C00F58475 /* FloatyWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatyWindow.swift; sourceTree = "<group>"; };
+		F0FB161120E6376C00F58475 /* FloatyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatyManager.swift; sourceTree = "<group>"; };
+		F0FB161220E6376C00F58475 /* FloatyItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatyItem.swift; sourceTree = "<group>"; };
+		F0FB161320E6376C00F58475 /* FloatyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatyViewController.swift; sourceTree = "<group>"; };
+		F0FB161420E6376C00F58475 /* Floaty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Floaty.swift; sourceTree = "<group>"; };
+		F0FB161520E6376C00F58475 /* FloatyDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatyDelegate.swift; sourceTree = "<group>"; };
+		FB3D8BD5F5EB1EE39B448612 /* Pods-Pomodoro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pomodoro.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pomodoro/Pods-Pomodoro.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +48,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7A88136C8A9D1BDAC03DEA1 /* Pods_Pomodoro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4BC7EEE4611DE7DC5A2226FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C8A954837E6F6244C48822EF /* Pods-Pomodoro.debug.xcconfig */,
+				FB3D8BD5F5EB1EE39B448612 /* Pods-Pomodoro.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8CFF2CF101548A11A5E2ED91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B05DFAE193F14F7CBF18248F /* Pods_Pomodoro.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F0403BE220E5489100671ED4 = {
 			isa = PBXGroup;
 			children = (
 				F0403BED20E5489100671ED4 /* Pomodoro */,
 				F0403BEC20E5489100671ED4 /* Products */,
+				4BC7EEE4611DE7DC5A2226FF /* Pods */,
+				8CFF2CF101548A11A5E2ED91 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +93,7 @@
 		F0403BED20E5489100671ED4 /* Pomodoro */ = {
 			isa = PBXGroup;
 			children = (
+				F0FB160E20E6376C00F58475 /* FAB */,
 				F0403BEE20E5489100671ED4 /* AppDelegate.swift */,
 				F0403BF020E5489100671ED4 /* ViewController.swift */,
 				F0403C0020E54BCF00671ED4 /* GroupListViewContoller.swift */,
@@ -67,6 +105,20 @@
 			path = Pomodoro;
 			sourceTree = "<group>";
 		};
+		F0FB160E20E6376C00F58475 /* FAB */ = {
+			isa = PBXGroup;
+			children = (
+				F0FB160F20E6376C00F58475 /* Floaty.h */,
+				F0FB161020E6376C00F58475 /* FloatyWindow.swift */,
+				F0FB161120E6376C00F58475 /* FloatyManager.swift */,
+				F0FB161220E6376C00F58475 /* FloatyItem.swift */,
+				F0FB161320E6376C00F58475 /* FloatyViewController.swift */,
+				F0FB161420E6376C00F58475 /* Floaty.swift */,
+				F0FB161520E6376C00F58475 /* FloatyDelegate.swift */,
+			);
+			path = FAB;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +126,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0403BFD20E5489200671ED4 /* Build configuration list for PBXNativeTarget "Pomodoro" */;
 			buildPhases = (
+				5D6F5867E3537D0D5742B356 /* [CP] Check Pods Manifest.lock */,
 				F0403BE720E5489100671ED4 /* Sources */,
 				F0403BE820E5489100671ED4 /* Frameworks */,
 				F0403BE920E5489100671ED4 /* Resources */,
+				C80D225DD5DDB3E2347A8A64 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +187,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5D6F5867E3537D0D5742B356 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pomodoro-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C80D225DD5DDB3E2347A8A64 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Pomodoro/Pods-Pomodoro-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pomodoro/Pods-Pomodoro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F0403BE720E5489100671ED4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0FB161720E6376D00F58475 /* FloatyManager.swift in Sources */,
+				F0FB161620E6376D00F58475 /* FloatyWindow.swift in Sources */,
 				F0403C0120E54BCF00671ED4 /* GroupListViewContoller.swift in Sources */,
 				F0403BF120E5489100671ED4 /* ViewController.swift in Sources */,
 				F0403BEF20E5489100671ED4 /* AppDelegate.swift in Sources */,
+				F0FB161B20E6376D00F58475 /* FloatyDelegate.swift in Sources */,
+				F0FB161820E6376D00F58475 /* FloatyItem.swift in Sources */,
+				F0FB161A20E6376D00F58475 /* Floaty.swift in Sources */,
+				F0FB161920E6376D00F58475 /* FloatyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +381,7 @@
 		};
 		F0403BFE20E5489200671ED4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8A954837E6F6244C48822EF /* Pods-Pomodoro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +400,7 @@
 		};
 		F0403BFF20E5489200671ED4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB3D8BD5F5EB1EE39B448612 /* Pods-Pomodoro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
