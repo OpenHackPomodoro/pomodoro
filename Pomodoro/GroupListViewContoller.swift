@@ -12,6 +12,8 @@ class GroupTableViewCell: UITableViewCell {
     @IBOutlet weak var groupName: UILabel!
     @IBOutlet weak var Count: UILabel!
     @IBOutlet weak var limitCount: UILabel!
+    @IBOutlet weak var ThumbImage: UIImageView!
+    
 }
 
 class MyListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -21,7 +23,7 @@ class MyListViewController: UIViewController, UITableViewDataSource, UITableView
     
     @IBOutlet weak var myTableView: UITableView!
     
-    let StudyList:[String] = ["코딩 포모도로","토익 포모도로"]
+    let StudyList:[String] = ["하루 25분씩 완성하는 코딩","영알못 탈출 토익"]
     let StudyPeople:[String] = ["1","5"]
     let StudyLimit:[String] = ["1/10", "5/10"]
     
@@ -34,7 +36,7 @@ class MyListViewController: UIViewController, UITableViewDataSource, UITableView
         let subview = UIImageView()
         subview.frame = CGRect(x: 0, y: 1334, width: 375, height: 667)
         //subview.backgroundColor = .red
-        subview.image = #imageLiteral(resourceName: "KakaoTalk_Photo_2018-06-29-18-40-57.png")
+        subview.image = #imageLiteral(resourceName: "KakaoTalk_Photo_2018-06-29-21-25-35.png")
         view.addSubview(subview)
         subview.layer.cornerRadius = 50
         UIView.animate(withDuration: 0.5) {
@@ -65,7 +67,7 @@ class MyListViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let myCell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath as IndexPath) as! GroupTableViewCell
-
+        myCell.ThumbImage.image = #imageLiteral(resourceName: "OrangeFace")
         myCell.groupName!.text = StudyList[indexPath.row]
         myCell.Count!.text = StudyPeople[indexPath.row]
         myCell.limitCount!.text = StudyLimit[indexPath.row]

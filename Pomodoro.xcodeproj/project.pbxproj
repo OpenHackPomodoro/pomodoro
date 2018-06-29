@@ -20,7 +20,7 @@
 		F0FB161920E6376D00F58475 /* FloatyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FB161320E6376C00F58475 /* FloatyViewController.swift */; };
 		F0FB161A20E6376D00F58475 /* Floaty.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FB161420E6376C00F58475 /* Floaty.swift */; };
 		F0FB161B20E6376D00F58475 /* FloatyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FB161520E6376C00F58475 /* FloatyDelegate.swift */; };
-		F0FB161F20E65B5700F58475 /* KakaoTalk_Photo_2018-06-29-18-40-57.png in Resources */ = {isa = PBXBuildFile; fileRef = F0FB161E20E65B5600F58475 /* KakaoTalk_Photo_2018-06-29-18-40-57.png */; };
+		F0FB162120E65CCF00F58475 /* KakaoTalk_Photo_2018-06-29-21-25-35.png in Resources */ = {isa = PBXBuildFile; fileRef = F0FB162020E65CCF00F58475 /* KakaoTalk_Photo_2018-06-29-21-25-35.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +41,7 @@
 		F0FB161320E6376C00F58475 /* FloatyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatyViewController.swift; sourceTree = "<group>"; };
 		F0FB161420E6376C00F58475 /* Floaty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Floaty.swift; sourceTree = "<group>"; };
 		F0FB161520E6376C00F58475 /* FloatyDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatyDelegate.swift; sourceTree = "<group>"; };
-		F0FB161E20E65B5600F58475 /* KakaoTalk_Photo_2018-06-29-18-40-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KakaoTalk_Photo_2018-06-29-18-40-57.png"; sourceTree = "<group>"; };
+		F0FB162020E65CCF00F58475 /* KakaoTalk_Photo_2018-06-29-21-25-35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KakaoTalk_Photo_2018-06-29-21-25-35.png"; sourceTree = "<group>"; };
 		FB3D8BD5F5EB1EE39B448612 /* Pods-Pomodoro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pomodoro.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pomodoro/Pods-Pomodoro.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,9 +99,9 @@
 				F0403BEE20E5489100671ED4 /* AppDelegate.swift */,
 				F0403BF020E5489100671ED4 /* ViewController.swift */,
 				F0403C0020E54BCF00671ED4 /* GroupListViewContoller.swift */,
+				F0FB162020E65CCF00F58475 /* KakaoTalk_Photo_2018-06-29-21-25-35.png */,
 				F0403BF220E5489100671ED4 /* Main.storyboard */,
 				F0403BF520E5489200671ED4 /* Assets.xcassets */,
-				F0FB161E20E65B5600F58475 /* KakaoTalk_Photo_2018-06-29-18-40-57.png */,
 				F0403BF720E5489200671ED4 /* LaunchScreen.storyboard */,
 				F0403BFA20E5489200671ED4 /* Info.plist */,
 			);
@@ -182,10 +182,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0FB162120E65CCF00F58475 /* KakaoTalk_Photo_2018-06-29-21-25-35.png in Resources */,
 				F0403BF920E5489200671ED4 /* LaunchScreen.storyboard in Resources */,
 				F0403BF620E5489200671ED4 /* Assets.xcassets in Resources */,
 				F0403BF420E5489100671ED4 /* Main.storyboard in Resources */,
-				F0FB161F20E65B5700F58475 /* KakaoTalk_Photo_2018-06-29-18-40-57.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
