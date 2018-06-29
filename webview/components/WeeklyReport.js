@@ -10,7 +10,7 @@ const data = [
 ];
 
 const WeeklyReport = () => (
-  <div className='month-container'>
+  <div className='week-container'>
     {data.map((item, index) => {
       return <IntervalReportBar isWeekly={true} day={index} data={item.count} color={item.color} key={index} />
     })}

@@ -19971,7 +19971,9 @@ var IntervalReportBar = function IntervalReportBar(_ref) {
       color = _ref.color,
       isWeekly = _ref.isWeekly;
 
+  var week = ['월', '화', '수', '목', '금'];
   var index = isWeekly ? 13 : 70;
+  var cn = isWeekly ? 'week-count' : 'month-count';
   var style = { height: data / index * 100 + '%', backgroundColor: color, width: '100%' };
   return _react2.default.createElement(
     'div',
@@ -19985,7 +19987,7 @@ var IntervalReportBar = function IntervalReportBar(_ref) {
         { style: style, className: 'month-inner' },
         _react2.default.createElement(
           'div',
-          { className: 'month-count' },
+          { className: cn },
           data
         )
       )
@@ -19993,8 +19995,7 @@ var IntervalReportBar = function IntervalReportBar(_ref) {
     _react2.default.createElement(
       'div',
       null,
-      day + 1,
-      '\uC8FC'
+      isWeekly ? week[day] : day + 1 + '주'
     )
   );
 };
@@ -20052,7 +20053,7 @@ var data = [{ count: 3, color: '#ccc6f8' }, { count: 9, color: '#feeed4' }, { co
 var WeeklyReport = function WeeklyReport() {
   return _react2.default.createElement(
     'div',
-    { className: 'month-container' },
+    { className: 'week-container' },
     data.map(function (item, index) {
       return _react2.default.createElement(_IntervalReportBar2.default, { isWeekly: true, day: index, data: item.count, color: item.color, key: index });
     })
@@ -24475,7 +24476,7 @@ var SegmentTab = function SegmentTab() {
         ),
         _react2.default.createElement(
           _reactRouterDom.NavLink,
-          { exacr: true, to: '/month' },
+          { exact: true, to: '/month' },
           '\uC774\uBC88\uB2EC'
         )
       )
@@ -24628,7 +24629,7 @@ var App = function App() {
 };
 
 _reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('root'));
-},{"react":12,"react-dom":14,"./components/GroupPage":8,"./components/ReportItem":10,"./style.scss":6}],103:[function(require,module,exports) {
+},{"react":12,"react-dom":14,"./components/GroupPage":8,"./components/ReportItem":10,"./style.scss":6}],106:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -24798,5 +24799,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[103,4], null)
+},{}]},{},[106,4], null)
 //# sourceMappingURL=/App.41195434.map
