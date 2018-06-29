@@ -69,5 +69,14 @@ router.get('/pomodoro/group', (req, res, next) => {
     });
 })
 
+router.get('/pomodoro', (req, res, next) => {
+  query(`SELECT * FROM pomodoro WHERE user_id = ?`, [req.query.uid])
+    .then(r => res.json(r))
+    .catch(e => {
+      console.log(e);
+      res.json({ "result": false, "error": e });
+    });
+})
+
 module.exports = router;
 
