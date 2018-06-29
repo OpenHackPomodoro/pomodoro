@@ -8,13 +8,13 @@ const SegmentTab = () => (
   <Router>
     <div>
       <div className='stat-label'>통계</div>
-      <Route path='/' component={TodayReport} />
+      <Route path='/' exact component={TodayReport} />
       <Route path='/week' component={WeeklyReport} />
       <Route path='/month' component={MonthlyReport} />
       <div className='tab-container'>
-        <NavLink to='/'>오늘</NavLink>
-        <NavLink to='/week'>이번주</NavLink>
-        <NavLink to='/month'>이번달</NavLink>
+        <NavLink exact to='/'>오늘</NavLink>
+        <NavLink exact to='/week'>이번주</NavLink>
+        <NavLink exacr to='/month'>이번달</NavLink>
       </div>
     </div>
   </Router>
