@@ -38,10 +38,10 @@ class ViewController: UIViewController {
         progress.trackThickness = 0.6
         progress.clockwise = true
         progress.gradientRotateSpeed = 2
-        progress.roundedCorners = false
+        progress.roundedCorners = true
         progress.glowMode = .forward
         progress.glowAmount = 0.9
-        progress.set(colors: UIColor.cyan ,UIColor.white, UIColor.magenta, UIColor.white, UIColor.orange)
+        progress.set(colors: UIColor.red ,UIColor.red, UIColor.red, UIColor.red, UIColor.red)
         progress.center = CGPoint(x: view.center.x, y: view.center.y + 25)
         view.addSubview(progress)
     }
@@ -58,28 +58,29 @@ class ViewController: UIViewController {
     @IBAction func sliderDidChangeValue(_ sender: UISlider) {
         progress.angle = Double(sender.value)*360
     }
-    @IBAction func animatePlayBtn(_ sender: Any) {
-        progress.animate(fromAngle: 0, toAngle: 360, duration: 5) { completed in
-            if completed {
-                //                print("animation stopped, completed")
-                //                self.count = Int(self.PomoCount.text!)!
-                print(self.PomoCount.text)
-                if let rawText1 = self.PomoCount.text {
-                    print(rawText1)
-                    self.rawText = rawText1
-                }
-                if let tmp1 = Int(self.rawText){
-                    
-                    self.count = tmp1
-                    self.count += 1
-                    print(self.count)
-                    
-                }
-            } else {
-                print("animation stopped, was interrupted")
-            }
-        }
-    }
+//   @IBAction func animatePlayBtn(_ sender: Any) {
+//        progress.animate(fromAngle: 0, toAngle: 360, duration: 5) { completed in
+//            if completed {
+//                //                print("animation stopped, completed")
+//                //                self.count = Int(self.PomoCount.text!)!
+//                print(self.PomoCount.text)
+//                if let rawText1 = self.PomoCount.text {
+//                    print(rawText1)
+//                    self.rawText = rawText1
+//                }
+//                if let tmp1 = Int(self.rawText){
+//
+//                    self.count = tmp1
+//                    self.count += 1
+//                    print(self.count)
+//
+//                }
+//                self.timeInSec = 30
+//            } else {
+//                print("animation stopped, was interrupted")
+//            }
+//        }
+//    }
     
     @IBOutlet var timerButton: UIButton!
     @IBAction func timerAction(_ sender: UIButton) {
