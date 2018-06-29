@@ -40,9 +40,19 @@ router.post('/group', (req, res, next) => {
     });
 });
 
-router.get('/group', (req, res, next) => {
+router.get('/group/public', (req, res, next) => {
   query(`SELECT _g.group_name, _g.isPrivate FROM _group _g , group_member m
-          WHERE _g.gid = m.gid AND m.user_id = ?`, [req.query.uid])
+          WHERE _g.gid = m.gid AND m.user_id = ? AND isPrivate = false`, [req.query.uid])
+    .then(r => res.json(r))
+    .catch(e => {
+      console.log(e);
+      res.json({ "result": false, "error": e });
+    });
+})
+
+router.get('/group/private', (req, res, next) => {
+  query(`SELECT _g.group_name, _g.isPrivate FROM _group _g , group_member m
+          WHERE _g.gid = m.gid AND m.user_id = ? AND isPrivate = true`, [req.query.uid])
     .then(r => res.json(r))
     .catch(e => {
       console.log(e);
@@ -80,7 +90,7 @@ router.get('/pomodoro', (req, res, next) => {
 
 
 router.get('/group/search', (req, res, next) => {
-  query(`SELECT * FROM _group WHERE group_name LIKE "%${req.query.group_name}%"`)
+  query(`SELECT * FROM _group WHERE group_name LIKE "%${req.query.group_name}%" AND isPrivate = false`)
     .then(r => res.json(r))
     .catch(e => {
       console.log(e);
