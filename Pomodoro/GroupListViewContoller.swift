@@ -36,7 +36,7 @@ class MyListViewController: UIViewController, UITableViewDataSource, UITableView
         
         
         subview.frame = CGRect(x: 0, y: 1334, width: 375, height: 667)
-        subview.image = #imageLiteral(resourceName: "KakaoTalk_Photo_2018-06-29-21-25-35.png")
+        subview.image = #imageLiteral(resourceName: "Subview.jpeg")
         view.addSubview(subview)
         subview.layer.cornerRadius = 50
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MyListViewController.closeImageView))
