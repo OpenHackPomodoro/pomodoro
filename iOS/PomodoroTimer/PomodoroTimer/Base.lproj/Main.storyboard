@@ -40,7 +40,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3e-7O-gxg">
-                                <rect key="frame" x="87" y="567" width="200" height="50"/>
+                                <rect key="frame" x="87" y="467" width="200" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.4715253204" blue="0.33992574129999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
@@ -51,6 +51,20 @@
                                     <action selector="timerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Er-9L-Mqz"/>
                                 </connections>
                             </button>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WQS-35-C0P">
+                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem title="홈" image="home" id="SfA-60-kpe">
+                                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="50" maxX="0.0" maxY="0.0"/>
+                                    </tabBarItem>
+                                    <tabBarItem title="내 포모도로" image="fileText" id="JHa-Fi-DC7"/>
+                                    <tabBarItem title="리포트" image="trendingUp" id="ELy-s9-YY9"/>
+                                    <tabBarItem title="함께하기" image="users" id="G7N-KO-FQH"/>
+                                    <tabBarItem title="설정" image="settings" id="jo4-Ip-Au1"/>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -67,4 +81,11 @@
             <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="fileText" width="12" height="12"/>
+        <image name="home" width="12" height="12"/>
+        <image name="settings" width="12" height="12"/>
+        <image name="trendingUp" width="12" height="12"/>
+        <image name="users" width="12" height="12"/>
+    </resources>
 </document>

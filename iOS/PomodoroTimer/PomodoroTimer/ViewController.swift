@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         progress.glowMode = .forward
         progress.glowAmount = 0.9
         progress.set(colors: UIColor.red ,UIColor.red, UIColor.red, UIColor.red, UIColor.red)
-        progress.center = CGPoint(x: view.center.x, y: view.center.y + 25)
+        progress.center = CGPoint(x: view.center.x, y: view.center.y - 50)
         view.addSubview(progress)
     }
 
@@ -101,6 +101,7 @@ class ViewController: UIViewController {
             timer!.invalidate()
             timerButton.setTitle("Start", for: [])
 //            progress.animateFromAngle(progress.angle, toAngle: 0, duration: 0.5, completion: nil)
+            
             progress.animate(fromAngle: progress.angle, toAngle: 0, duration: 0.5) { completed in
                 if completed{
                     //animate 끝났을 때
