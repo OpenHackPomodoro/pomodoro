@@ -5,13 +5,17 @@
 
 <h1 align="center">Pomodoro🍅</h1>
 <p align="center">
-	<a href="https://github.com/OpenHackPomodoro/pomodoro/blob/master/LICENSE"><img src="https://img.shields.io/github/license/mashape/apistatus.svg">
-	
+	<a href="https://github.com/OpenHackPomodoro/pomodoro/blob/master/LICENSE"><img src="https://img.shields.io/github/license/mashape/apistatus.svg"></a>	
 </p>
 
 ## Overview
-Pomodoro is a iOS timer app helps you achieve your own goals and makes you motivated
 
+<img src="https://github.com/OpenHackPomodoro/pomodoro/blob/master/Resources/main%20copy%202.png">
+</br></br>
+
+<img src="https://github.com/OpenHackPomodoro/pomodoro/blob/master/Resources/splash%20copy.png">
+
+Pomodoro is a iOS timer app helps you achieve your own goals and makes you motivated
 ## Introduction
 
 ## Features
