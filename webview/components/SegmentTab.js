@@ -14,7 +14,7 @@ const SegmentTab = () => (
       <div className='tab-container'>
         <NavLink exact to='/'>오늘</NavLink>
         <NavLink exact to='/week'>이번주</NavLink>
-        <NavLink exacr to='/month'>이번달</NavLink>
+        <NavLink exact to='/month'>이번달</NavLink>
       </div>
     </div>
   </Router>
