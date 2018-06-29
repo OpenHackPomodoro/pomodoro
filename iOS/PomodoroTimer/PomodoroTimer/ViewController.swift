@@ -41,6 +41,7 @@ class ViewController: UIViewController {
         progress.roundedCorners = true
         progress.glowMode = .forward
         progress.glowAmount = 0.9
+        progress.trackColor = UIColor.gray
         progress.set(colors: UIColor.red ,UIColor.red, UIColor.red, UIColor.red, UIColor.red)
         progress.center = CGPoint(x: view.center.x, y: view.center.y - 50)
         view.addSubview(progress)
@@ -108,6 +109,7 @@ class ViewController: UIViewController {
                     print("Animate cycle finished!")
                     self.count += 1
                     print(self.count)
+                    progress.set(colors: FFC562)
                 }
                 else {
                     //animate 비정상적 종료
