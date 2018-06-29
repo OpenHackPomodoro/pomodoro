@@ -47,11 +47,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
-                                    <tabBarItem title="홈" image="home" id="SfA-60-kpe">
+                                    <tabBarItem title="홈" image="home copy" id="SfA-60-kpe">
                                         <inset key="largeContentSizeImageInsets" minX="0.0" minY="50" maxX="0.0" maxY="0.0"/>
                                     </tabBarItem>
-                                    <tabBarItem title="내 포모도로" image="fileText" id="JHa-Fi-DC7"/>
-                                    <tabBarItem title="리포트" image="trendingUp" id="ELy-s9-YY9"/>
+                                    <tabBarItem title="내 포모도로" image="file-text" id="JHa-Fi-DC7"/>
+                                    <tabBarItem title="리포트" image="trending-up" id="ELy-s9-YY9"/>
                                     <tabBarItem title="함께하기" image="users" id="G7N-KO-FQH"/>
                                     <tabBarItem title="설정" image="settings" id="jo4-Ip-Au1"/>
                                 </items>
@@ -95,16 +95,12 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="타이머 설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvz-qw-H6D">
-                                <rect key="frame" x="302" y="158" width="63" height="20"/>
+                                <rect key="frame" x="303" y="155" width="63" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SpoqaHanSans-Regular" family="SpoqaHanSans" pointSize="13"/>
                                 <color key="textColor" red="0.40392156862745099" green="0.40392156862745099" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="settings" translatesAutoresizingMaskIntoConstraints="NO" id="PP1-lS-uGZ">
-                                <rect key="frame" x="279" y="156" width="24" height="24"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="asd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57D-fU-Z3K">
                                 <rect key="frame" x="0.0" y="64" width="375" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -144,6 +140,11 @@
                                     <action selector="animatePause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qEW-PI-AYo"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuA-ax-OUi">
+                                <rect key="frame" x="284" y="157" width="16" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="settings"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -163,11 +164,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="fileText" width="12" height="12"/>
-        <image name="home" width="12" height="12"/>
-        <image name="settings" width="12" height="12"/>
-        <image name="trendingUp" width="12" height="12"/>
-        <image name="users" width="12" height="12"/>
+        <image name="file-text" width="18" height="22"/>
+        <image name="home copy" width="20" height="22"/>
+        <image name="settings" width="24" height="24"/>
+        <image name="trending-up" width="24" height="14"/>
+        <image name="users" width="24" height="20"/>
     </resources>
     <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
