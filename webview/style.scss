@@ -214,9 +214,11 @@ a {
 }
 
 .month-outer {
+  flex-direction: column;
+  justify-content: flex-end;
   height: 240px;
   display: flex;
-  align-items: end;
+  align-items: end !important;
   margin-bottom: 8px;
   width: 14px;
 }
@@ -243,4 +245,5 @@ a {
 }
 .today-container, .month-container {
   height: 280px;
+  margin-bottom: 5px;
 }
