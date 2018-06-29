@@ -31,13 +31,14 @@ class MyListViewController: UIViewController, UITableViewDataSource, UITableView
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let subview = UIView()
-        subview.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
-        subview.backgroundColor = .red
+        let subview = UIImageView()
+        subview.frame = CGRect(x: 0, y: 1334, width: 375, height: 667)
+        //subview.backgroundColor = .red
+        subview.image = #imageLiteral(resourceName: "KakaoTalk_Photo_2018-06-29-18-40-57.png")
         view.addSubview(subview)
         subview.layer.cornerRadius = 50
         UIView.animate(withDuration: 0.5) {
-            subview.frame.origin.y = 200
+            subview.frame.origin.y = 0
         }
         
     }
