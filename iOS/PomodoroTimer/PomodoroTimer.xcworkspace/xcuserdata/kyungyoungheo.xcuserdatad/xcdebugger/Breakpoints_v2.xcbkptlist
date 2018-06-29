@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PomodoroTimer/ViewController.swift"
-            timestampString = "551980423.812472"
+            timestampString = "551981028.119549"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "timerAction(_:)"
             landmarkType = "7">
          </BreakpointContent>

@@ -35,15 +35,19 @@ class ViewController: UIViewController {
         
         progress = KDCircularProgress(frame: CGRect(x: 0, y: 0, width: 350, height: 350))
         progress.startAngle = -90
-        progress.progressThickness = 0.25
-        progress.trackThickness = 0.6
+        progress.progressThickness = 0.5
+        progress.trackThickness = 0.5
         progress.clockwise = true
         progress.gradientRotateSpeed = 2
         progress.roundedCorners = true
         progress.glowMode = .forward
-        progress.glowAmount = 0.1
-        progress.trackColor = UIColor.gray
-        progress.set(colors: UIColor.red ,UIColor.red, UIColor.red, UIColor.red, UIColor.red)
+        progress.glowAmount = 0
+        
+        let myRed = UIColor(red:0.96, green:0.38, blue:0.31, alpha:1.0)
+        let myGray = UIColor(red:0.93, green:0.93, blue:0.93, alpha:1.0)
+        
+        progress.trackColor = myGray
+        progress.set(colors: myRed ,myRed, myRed, myRed,myRed)
         progress.center = CGPoint(x: view.center.x, y: view.center.y - 50)
         view.addSubview(progress)
     }
@@ -209,4 +213,3 @@ class ViewController: UIViewController {
         self.totalTimeInSec = 30
     }
 }
-
