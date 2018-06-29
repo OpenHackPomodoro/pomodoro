@@ -14,6 +14,7 @@
 		F0403BF620E5489200671ED4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0403BF520E5489200671ED4 /* Assets.xcassets */; };
 		F0403BF920E5489200671ED4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0403BF720E5489200671ED4 /* LaunchScreen.storyboard */; };
 		F0403C0120E54BCF00671ED4 /* GroupListViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0403C0020E54BCF00671ED4 /* GroupListViewContoller.swift */; };
+		F04E733D20E685F500B6ADBE /* TogetherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04E733C20E685F500B6ADBE /* TogetherViewController.swift */; };
 		F0FB161620E6376D00F58475 /* FloatyWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FB161020E6376C00F58475 /* FloatyWindow.swift */; };
 		F0FB161720E6376D00F58475 /* FloatyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FB161120E6376C00F58475 /* FloatyManager.swift */; };
 		F0FB161820E6376D00F58475 /* FloatyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FB161220E6376C00F58475 /* FloatyItem.swift */; };
@@ -37,6 +38,7 @@
 		F0403BF820E5489200671ED4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0403BFA20E5489200671ED4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0403C0020E54BCF00671ED4 /* GroupListViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListViewContoller.swift; sourceTree = "<group>"; };
+		F04E733C20E685F500B6ADBE /* TogetherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogetherViewController.swift; sourceTree = "<group>"; };
 		F0FB160F20E6376C00F58475 /* Floaty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Floaty.h; sourceTree = "<group>"; };
 		F0FB161020E6376C00F58475 /* FloatyWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatyWindow.swift; sourceTree = "<group>"; };
 		F0FB161120E6376C00F58475 /* FloatyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatyManager.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				F0403BEE20E5489100671ED4 /* AppDelegate.swift */,
 				F0403BF020E5489100671ED4 /* ViewController.swift */,
 				F0403C0020E54BCF00671ED4 /* GroupListViewContoller.swift */,
+				F04E733C20E685F500B6ADBE /* TogetherViewController.swift */,
 				F0FB162020E65CCF00F58475 /* KakaoTalk_Photo_2018-06-29-21-25-35.png */,
 				F0403BF220E5489100671ED4 /* Main.storyboard */,
 				F0FB162620E6777200F58475 /* SettingViewController.swift */,
@@ -246,6 +249,7 @@
 			files = (
 				F0FB161720E6376D00F58475 /* FloatyManager.swift in Sources */,
 				F0FB161620E6376D00F58475 /* FloatyWindow.swift in Sources */,
+				F04E733D20E685F500B6ADBE /* TogetherViewController.swift in Sources */,
 				F0403C0120E54BCF00671ED4 /* GroupListViewContoller.swift in Sources */,
 				F0403BF120E5489100671ED4 /* ViewController.swift in Sources */,
 				F0403BEF20E5489100671ED4 /* AppDelegate.swift in Sources */,
