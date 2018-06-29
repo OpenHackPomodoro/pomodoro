@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     var timer : Timer?
     var timeInSec = 30.0
     
+    @IBOutlet var roundedCornerView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -30,6 +32,10 @@ class ViewController: UIViewController {
             timeInSec = totalTime
         }
 //        timeInSec = totalTimeInSec!
+        
+        self.roundedCornerView.layer.cornerRadius = 3
+        self.pauseBtn.layer.cornerRadius = 10
+        self.timerButton.layer.cornerRadius = 10
         
         pauseBtn.isHidden = true
         
@@ -48,7 +54,7 @@ class ViewController: UIViewController {
         
         progress.trackColor = myGray
         progress.set(colors: myRed ,myRed, myRed, myRed,myRed)
-        progress.center = CGPoint(x: view.center.x, y: view.center.y - 50)
+        progress.center = CGPoint(x: view.center.x, y: view.center.y)
         view.addSubview(progress)
     }
 
