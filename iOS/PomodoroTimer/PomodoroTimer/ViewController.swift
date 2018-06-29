@@ -31,6 +31,8 @@ class ViewController: UIViewController {
         }
 //        timeInSec = totalTimeInSec!
         
+        pauseBtn.isHidden = true
+        stopBtn.isHidden = true
         
         progress = KDCircularProgress(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
         progress.startAngle = -90
@@ -56,9 +58,6 @@ class ViewController: UIViewController {
     
     @IBOutlet var PomoInterval: UITextField!
     
-    @IBAction func sliderDidChangeValue(_ sender: UISlider) {
-        progress.angle = Double(sender.value)*360
-    }
 //   @IBAction func animatePlayBtn(_ sender: Any) {
 //        progress.animate(fromAngle: 0, toAngle: 360, duration: 5) { completed in
 //            if completed {
@@ -92,15 +91,26 @@ class ViewController: UIViewController {
         
         totalTimeInSec = Double(getTimeFromTextField())
         
-        if sender.titleLabel!.text == "Start" {
+        if sender.titleLabel!.text == "START" {
             resetCounter()
             // pause, stop hidden, start show
+            pauseBtn.isHidden = true
+            stopBtn.isHidden = true
+            timerButton.isHidden = false
+            
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.changeLabelText), userInfo: nil, repeats: true)
             timerButton.setTitle("Paused", for: [])
+            
+            timerButton.isHidden = true
+            pauseBtn.isHidden = false
+            stopBtn.isHidden = false
         }else {
             // start hidden pause, stop show
+            
+            
+            
             timer!.invalidate()
-            timerButton.setTitle("Start", for: [])
+            timerButton.setTitle("START", for: [])
 //            progress.animateFromAngle(progress.angle, toAngle: 0, duration: 0.5, completion: nil)
             
             progress.animate(fromAngle: progress.angle, toAngle: 0, duration: 0.5) { completed in
@@ -109,7 +119,7 @@ class ViewController: UIViewController {
                     print("Animate cycle finished!")
                     self.count += 1
                     print(self.count)
-                    progress.set(colors: FFC562)
+                    self.progress.set(colors: UIColor.yellow)
                 }
                 else {
                     //animate 비정상적 종료
@@ -127,12 +137,25 @@ class ViewController: UIViewController {
     
     @IBOutlet var timerLabel: UILabel!
     
+    @IBAction func animatePause(_ sender: UIButton) {
+        // pause animate
+        progress.pauseAnimation()
+    }
+    @IBOutlet var pauseBtn: UIButton!
+    
+    @IBAction func animateStop(_ sender: UIButton) {
+        // stop animate
+        progress.stopAnimation()
+    }
+    
+    @IBOutlet var stopBtn: UIButton!
+    
     @objc func changeLabelText() {
-        if timeInSec == 0{
+        
+        timeInSec -= 1
+        if timeInSec == -1{
             timeInSec = Double(totalTimeInSec!)
         }
-        timeInSec -= 1
-        
         let newAngleValue = Double(newAngle())
         
         progress.animate(toAngle: newAngleValue, duration: 0.5, completion: nil)
@@ -173,6 +196,7 @@ class ViewController: UIViewController {
 //        }
 //    }
 //
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 //        if let timerData = getFromUserDefault(key: "Timer") {
