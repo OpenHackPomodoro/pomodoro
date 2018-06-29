@@ -13,11 +13,11 @@
 Pomodoro is a iOS timer app helps you **achieve your own goals** and makes you **motivated** by enhance **productivity**.
 
 ## Overview
+<img src="https://github.com/OpenHackPomodoro/pomodoro/blob/master/Resources/splash.png">
 
-<img src="https://github.com/OpenHackPomodoro/pomodoro/blob/master/Resources/main%20copy%202.png">
 </br></br>
 
-<img src="https://github.com/OpenHackPomodoro/pomodoro/blob/master/Resources/splash%20copy.png">
+<img src="https://github.com/OpenHackPomodoro/pomodoro/blob/master/Resources/11_23%20copy.png">
 
 ## Introduction
 
