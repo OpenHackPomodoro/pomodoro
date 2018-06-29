@@ -9,8 +9,8 @@ const GroupPage = () => (
   <div className='group-pgae'>
     <Header title={'리포트'}/>
     <DateLabel />
-    <ReportItem title='코딩 포모도로' total='10' count='1'/>
-    <ReportItem title='토익 포모도로' total='10' count='2'/>
+    <ReportItem title='코딩 포모도로' index={1} total='10' count='1'/>
+    <ReportItem title='토익 포모도로' index={2} total='10' count='2'/>
     <SegmentTab />
   </div>
 );

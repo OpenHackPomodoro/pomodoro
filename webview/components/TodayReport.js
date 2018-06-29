@@ -8,7 +8,7 @@ const TodayReport = ({ total, count }) => (
     </div> 
     <div className='today-outer'>
       <div className='target-text'><span>Total<br />목표 달성률<br /></span>30%</div>
-      <div className='today-inner' style={{width: '100%', height: '70%'}} /> 
+      <div className='today-inner' style={{width: '100%', height: '30%'}} /> 
     </div>
   </div>
 );

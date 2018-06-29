@@ -94,6 +94,16 @@ body {
   height: 100%;
   background-color: #f25e4f;
 }
+.report-inner-1 {
+   animation: pomodoro-top 2s;
+   animation-fill-mode: forwards;
+
+}
+.report-inner-2 {
+   animation: pomodoro-bottom 2s;
+   animation-fill-mode: forwards;
+
+}
 
 .report-info {
   display: flex;
@@ -179,9 +189,13 @@ a {
 }
 
 .today-outer {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: flex-end;
   width: 45px;
   height: 200px;
-  background-color: #f25e4f;
+  background-color: #eee;
   position: relative;
 }
 
@@ -192,7 +206,9 @@ a {
 }
 
 .today-inner {
-  background-color: #eee;
+  animation: today-bar 2s;
+  animation-fill-mode: forwards;
+  background-color: #f25e4f;
   transition: background-color 2s ease;
 }
 
@@ -246,4 +262,19 @@ a {
 .today-container, .month-container {
   height: 280px;
   margin-bottom: 5px;
+}
+
+@keyframes pomodoro-top {
+  0%   { width: 0; }
+  100% { width: 10%; }
+}
+
+@keyframes pomodoro-bottom {
+  0%   { width: 0; }
+  100% { width: 20%; }
+}
+
+@keyframes today-bar {
+  0%   {height: 0; }
+  100% {height: 30%; }
 }
