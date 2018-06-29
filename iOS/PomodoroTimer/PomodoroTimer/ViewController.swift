@@ -91,13 +91,11 @@ class ViewController: UIViewController {
 //    }
     
     @IBOutlet var PomoCountLabel: UILabel!
-    
-
     @IBOutlet var timerButton: UIButton!
     @IBAction func timerAction(_ sender: UIButton) {
         //get time of textField
         
-        totalTimeInSec = 1500
+        totalTimeInSec = 15
         
         if sender.titleLabel!.text == "START" {
             resetCounter()
@@ -161,10 +159,17 @@ class ViewController: UIViewController {
         if timeInSec == -1{
             timeInSec = Double(totalTimeInSec!)
             self.progress.set(colors: UIColor.yellow)
-            totalTimeInSec = 300
+            
             
             print("휴식뽀모 시작")
             self.PomoCountLabel.text = "1"
+            let alert = UIAlertController(title: "뽀모도로 하나 완성!", message: "5분의 휴식을 즐기세요.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("확인", comment: "Default action"), style: .default, handler: { _ in
+                NSLog("The \"OK\" alert occured.")
+            }))
+            self.present(alert, animated: true, completion: nil)
+            
+            totalTimeInSec = 300
         }
         
         let newAngleValue = Double(newAngle())
@@ -172,7 +177,7 @@ class ViewController: UIViewController {
         progress.animate(toAngle: newAngleValue, duration: 0.5, completion: nil)
         let (_,m,s) = secondsToHoursMinutesSeconds(seconds: Int(timeInSec))
         
-        timerLabel.text = "\(m):\(s)"
+        timerLabel.text = "\(m) : \(s)"
     }
     
     func newAngle() -> Int {
@@ -183,30 +188,6 @@ class ViewController: UIViewController {
         return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
     }
 
-//    func simpleAlert (title:String,message:String,style:UIAlertActionStyle = UIAlertActionStyle.default,button:String = "OK") {
-//
-//        let alertController = UIAlertController(title: title, message:   "n" + message, preferredStyle: UIAlertControllerStyle.alert)
-//        alertController.addAction(UIAlertAction(title: button, style: style,handler: nil))
-//        self.present(alertController, animated: true, completion: nil)
-//    }
-//
-//    func saveToUserDefault(key:String,value:String) {
-//
-//        UserDefaults.standard.setValue(value, forKey: key)
-//
-//    }
-//
-//    func getFromUserDefault(key:String) -> String? {
-//
-//        let defaults = UserDefaults.standard
-//
-//        if let value = defaults.string(forKey: key) {
-//            return value
-//        } else {
-//            return nil
-//        }
-//    }
-//
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
