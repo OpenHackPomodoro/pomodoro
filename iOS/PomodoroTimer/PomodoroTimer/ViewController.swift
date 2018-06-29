@@ -18,15 +18,18 @@ class ViewController: UIViewController {
     // these code are example code
     var totalTimeInSec:Double?
     var timer : Timer?
-    var timeInSec = 60.0
-    
+    var timeInSec = 30.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         // this code are example code
-        timeInSec = totalTimeInSec!
+        totalTimeInSec = 30
+        if let totalTime = totalTimeInSec {
+            timeInSec = totalTime
+        }
+//        timeInSec = totalTimeInSec!
         
         
         progress = KDCircularProgress(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
@@ -78,9 +81,81 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func animatePauseBtn(_ sender: Any) {
-        progress.pauseAnimation()
+    @IBOutlet var timerButton: UIButton!
+    @IBAction func timerAction(_ sender: UIButton) {
+        if sender.titleLabel!.text == "Start" {
+            resetCounter()
+            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.changeLabelText), userInfo: nil, repeats: true)
+            timerButton.setTitle("Stop", for: [])
+        }else {
+            timer!.invalidate()
+            timerButton.setTitle("Start", for: [])
+//            progress.animateFromAngle(progress.angle, toAngle: 0, duration: 0.5, completion: nil)
+            progress.animate(fromAngle: progress.angle, toAngle: 0, duration: 0.5, completion: nil)
+        }
+    }
+    func resetCounter () {
+        if let totalTime = totalTimeInSec{
+            timeInSec = totalTime
+        }
+//        timeInSec = totalTimeInSec!
     }
     
+    @IBOutlet var timerLabel: UILabel!
+    
+    @objc func changeLabelText() {
+        
+        timeInSec -= 1
+        
+        let newAngleValue = Double(newAngle())
+        
+//        circularProgressView.animateToAngle(newAngleValue, duration: 0.5, completion: nil)
+        progress.animate(toAngle: newAngleValue, duration: 0.5, completion: nil)
+        let (_,m,s) = secondsToHoursMinutesSeconds(seconds: Int(timeInSec))
+        
+        timerLabel.text = "\(m):\(s)"
+    }
+    
+    func newAngle() -> Int {
+        return Int(360 * (timeInSec / totalTimeInSec!))
+    }
+    
+    func secondsToHoursMinutesSeconds (seconds : Int) -> (Int, Int, Int) {
+        return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
+    }
+
+//    func simpleAlert (title:String,message:String,style:UIAlertActionStyle = UIAlertActionStyle.default,button:String = "OK") {
+//
+//        let alertController = UIAlertController(title: title, message:   "n" + message, preferredStyle: UIAlertControllerStyle.alert)
+//        alertController.addAction(UIAlertAction(title: button, style: style,handler: nil))
+//        self.present(alertController, animated: true, completion: nil)
+//    }
+//
+//    func saveToUserDefault(key:String,value:String) {
+//
+//        UserDefaults.standard.setValue(value, forKey: key)
+//
+//    }
+//
+//    func getFromUserDefault(key:String) -> String? {
+//
+//        let defaults = UserDefaults.standard
+//
+//        if let value = defaults.string(forKey: key) {
+//            return value
+//        } else {
+//            return nil
+//        }
+//    }
+//
+//    required init?(coder aDecoder: NSCoder) {
+//        super.init(coder: aDecoder)
+//        if let timerData = getFromUserDefault(key: "Timer") {
+//            self.totalTimeInSec = Double(timerData)! * 60.0
+//        } else {
+//            self.totalTimeInSec = 60.0
+//            saveToUserDefault(key: "Timer", value: "(1)")
+//        }
+//    }
 }
 
