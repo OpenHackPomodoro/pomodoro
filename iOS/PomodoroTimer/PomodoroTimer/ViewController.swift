@@ -32,17 +32,16 @@ class ViewController: UIViewController {
 //        timeInSec = totalTimeInSec!
         
         pauseBtn.isHidden = true
-        stopBtn.isHidden = true
         
-        progress = KDCircularProgress(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+        progress = KDCircularProgress(frame: CGRect(x: 0, y: 0, width: 350, height: 350))
         progress.startAngle = -90
-        progress.progressThickness = 0.2
+        progress.progressThickness = 0.25
         progress.trackThickness = 0.6
         progress.clockwise = true
         progress.gradientRotateSpeed = 2
         progress.roundedCorners = true
         progress.glowMode = .forward
-        progress.glowAmount = 0.9
+        progress.glowAmount = 0.1
         progress.trackColor = UIColor.gray
         progress.set(colors: UIColor.red ,UIColor.red, UIColor.red, UIColor.red, UIColor.red)
         progress.center = CGPoint(x: view.center.x, y: view.center.y - 50)
@@ -56,7 +55,6 @@ class ViewController: UIViewController {
 
     @IBOutlet var PomoCount: UILabel!
     
-    @IBOutlet var PomoInterval: UITextField!
     
 //   @IBAction func animatePlayBtn(_ sender: Any) {
 //        progress.animate(fromAngle: 0, toAngle: 360, duration: 5) { completed in
@@ -82,28 +80,27 @@ class ViewController: UIViewController {
 //        }
 //    }
     
-    func getTimeFromTextField() -> Int{
-        return Int(PomoInterval.text!)!
-        
-    }
+    @IBOutlet var PomoCountLabel: UILabel!
+    
+
     @IBOutlet var timerButton: UIButton!
     @IBAction func timerAction(_ sender: UIButton) {
         //get time of textField
         
-        totalTimeInSec = Double(getTimeFromTextField())
+        totalTimeInSec = 1500
         
         if sender.titleLabel!.text == "START" {
             resetCounter()
             // pause, stop hidden, start show
             pauseBtn.isHidden = true
-            stopBtn.isHidden = true
+            
             timerButton.isHidden = false
             
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.changeLabelText), userInfo: nil, repeats: true)
             
             timerButton.isHidden = true
             pauseBtn.isHidden = false
-            stopBtn.isHidden = false
+            
         }else {
             // start hidden pause, stop show
             
@@ -125,7 +122,7 @@ class ViewController: UIViewController {
         
         timerButton.isHidden = false
         pauseBtn.isHidden = true
-        stopBtn.isHidden = true
+        
         
         timer!.invalidate()
         timerButton.setTitle("START", for: [])
@@ -147,17 +144,7 @@ class ViewController: UIViewController {
     }
     @IBOutlet var pauseBtn: UIButton!
     
-    @IBAction func animateStop(_ sender: UIButton) {
-        // stop animate
-        progress.stopAnimation()
-        
-        timerButton.isHidden = false
-        pauseBtn.isHidden = true
-        stopBtn.isHidden = true
-    }
-    
-    @IBOutlet var stopBtn: UIButton!
-    
+
     @objc func changeLabelText() {
         
         timeInSec -= 1
@@ -167,6 +154,7 @@ class ViewController: UIViewController {
             totalTimeInSec = 300
             
             print("휴식뽀모 시작")
+            self.PomoCountLabel.text = "1"
         }
         
         let newAngleValue = Double(newAngle())
