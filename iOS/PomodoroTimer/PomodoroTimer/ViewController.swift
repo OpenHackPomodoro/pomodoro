@@ -81,9 +81,15 @@ class ViewController: UIViewController {
 //            }
 //        }
 //    }
-    
+    func getTimeFromTextField() -> Int{
+        return Int(PomoInterval.text!)!
+        
+    }
     @IBOutlet var timerButton: UIButton!
     @IBAction func timerAction(_ sender: UIButton) {
+        //get time of textField
+        timeInSec = Double(getTimeFromTextField())
+        print(timeInSec)
         if sender.titleLabel!.text == "Start" {
             resetCounter()
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.changeLabelText), userInfo: nil, repeats: true)
@@ -110,7 +116,6 @@ class ViewController: UIViewController {
         
         let newAngleValue = Double(newAngle())
         
-//        circularProgressView.animateToAngle(newAngleValue, duration: 0.5, completion: nil)
         progress.animate(toAngle: newAngleValue, duration: 0.5, completion: nil)
         let (_,m,s) = secondsToHoursMinutesSeconds(seconds: Int(timeInSec))
         
@@ -149,14 +154,15 @@ class ViewController: UIViewController {
 //        }
 //    }
 //
-//    required init?(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
 //        if let timerData = getFromUserDefault(key: "Timer") {
 //            self.totalTimeInSec = Double(timerData)! * 60.0
 //        } else {
 //            self.totalTimeInSec = 60.0
 //            saveToUserDefault(key: "Timer", value: "(1)")
 //        }
-//    }
+        self.totalTimeInSec = 30
+    }
 }
 
