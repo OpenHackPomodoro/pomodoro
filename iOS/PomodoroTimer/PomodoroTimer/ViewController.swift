@@ -93,18 +93,24 @@ class ViewController: UIViewController {
         
         if sender.titleLabel!.text == "Start" {
             resetCounter()
+            // pause, stop hidden, start show
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.changeLabelText), userInfo: nil, repeats: true)
-            timerButton.setTitle("Stop", for: [])
+            timerButton.setTitle("Paused", for: [])
         }else {
+            // start hidden pause, stop show
             timer!.invalidate()
             timerButton.setTitle("Start", for: [])
 //            progress.animateFromAngle(progress.angle, toAngle: 0, duration: 0.5, completion: nil)
             progress.animate(fromAngle: progress.angle, toAngle: 0, duration: 0.5) { completed in
                 if completed{
                     //animate 끝났을 때
+                    print("Animate cycle finished!")
+                    self.count += 1
+                    print(self.count)
                 }
                 else {
                     //animate 비정상적 종료
+                    print("Stopped!")
                 }
             }
         }
