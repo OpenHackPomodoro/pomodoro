@@ -290,6 +290,8 @@ public class KDCircularProgress: UIView, CAAnimationDelegate {
     }
     
     public func pauseAnimation() {
+        let myRed = UIColor(red:0.96, green:0.38, blue:0.31, alpha:1.0)
+        self.trackColor = myRed
         guard let presentationLayer = progressLayer.presentation() else { return }
         
         let currentValue = presentationLayer.angle

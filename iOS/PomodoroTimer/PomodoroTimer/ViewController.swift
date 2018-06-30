@@ -5,7 +5,6 @@
 //  Created by KyungYoung Heo on 2018. 6. 29..
 //  Copyright © 2018년 KyungYoung Heo. All rights reserved.
 //
-
 import UIKit
 import KDCircularProgress
 import Alamofire
@@ -31,7 +30,7 @@ class ViewController: UIViewController {
         if let totalTime = totalTimeInSec {
             timeInSec = totalTime
         }
-//        timeInSec = totalTimeInSec!
+        //        timeInSec = totalTimeInSec!
         
         self.roundedCornerView.layer.cornerRadius = 3
         self.pauseBtn.layer.cornerRadius = 10
@@ -51,18 +50,19 @@ class ViewController: UIViewController {
         
         let myRed = UIColor(red:0.96, green:0.38, blue:0.31, alpha:1.0)
         let myGray = UIColor(red:0.93, green:0.93, blue:0.93, alpha:1.0)
-        
+        let myYellow = UIColor(red:1.00, green:0.77, blue:0.38, alpha:1.0)
+//        self.progress.progressColors = [myYellow]
         progress.trackColor = myGray
-        progress.set(colors: myRed ,myRed, myRed, myRed,myRed)
+        progress.set(colors: myYellow)
         progress.center = CGPoint(x: view.center.x, y: view.center.y)
         view.addSubview(progress)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     @IBOutlet var PomoCount: UILabel!
     
     @IBOutlet var PomoCountLabel: UILabel!
@@ -70,7 +70,7 @@ class ViewController: UIViewController {
     @IBAction func timerAction(_ sender: UIButton) {
         //get time of textField
         
-        totalTimeInSec = 15
+        totalTimeInSec = 5
         
         if sender.titleLabel!.text == "START" {
             resetCounter()
@@ -94,7 +94,7 @@ class ViewController: UIViewController {
         if let totalTime = totalTimeInSec{
             timeInSec = totalTime
         }
-//        timeInSec = totalTimeInSec!
+        //        timeInSec = totalTimeInSec!
     }
     
     @IBOutlet var timerLabel: UILabel!
@@ -127,34 +127,46 @@ class ViewController: UIViewController {
     }
     @IBOutlet var pauseBtn: UIButton!
     
-
+    
     @objc func changeLabelText() {
+        var isRest = false;
         
         timeInSec -= 1
-        if timeInSec == -1{
-//            timeInSec = Double(totalTimeInSec!)
+        if timeInSec == 0 && !isRest {
+            //            timeInSec = Double(totalTimeInSec!)
             let myYellow = UIColor(red:1.00, green:0.77, blue:0.38, alpha:1.0)
-            self.progress.progressColors = [myYellow]
+            let myRed = UIColor(red:0.96, green:0.38, blue:0.31, alpha:1.0)
+            self.progress.progressColors = [myRed]
             
             print("휴식뽀모 시작")
             self.PomoCountLabel.text = "1"
-            let alert = UIAlertController(title: "뽀모도로 하나 완성!", message: "5분의 휴식을 즐기세요.", preferredStyle: .alert)
+            let alert = UIAlertController(title: "휴식 끝!", message: "다시 뽀모도로를 시작하세요.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: NSLocalizedString("확인", comment: "Default action"), style: .default, handler: { _ in
                 NSLog("The \"OK\" alert occured.")
             }))
             self.present(alert, animated: true, completion: nil)
-            
+            isRest = true
         }
         
         let newAngleValue = Double(newAngle())
         
         progress.animate(toAngle: newAngleValue, duration: 0.5, completion: nil)
         let (_,m,s) = secondsToHoursMinutesSeconds(seconds: Int(timeInSec))
-        if timeInSec == -1 {
-            totalTimeInSec = 300
-            timeInSec = 300
+       
+        if timeInSec == 0 && isRest{
+            totalTimeInSec = 26
+            timeInSec = 26
+            
+            let alert = UIAlertController(title: "휴식 끝!", message: "다시 뽀모도로를 시작하세요.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("확인", comment: "Default action"), style: .default, handler: { _ in
+                NSLog("The \"OK\" alert occured.")
+            }))
+            self.present(alert, animated: true, completion: nil)
+            isRest = false
         }
-        timerLabel.text = "\(m) : \(s)"
+        
+        timerLabel.text = "\(s) : 00"
+        
     }
     
     func newAngle() -> Int {
@@ -164,10 +176,10 @@ class ViewController: UIViewController {
     func secondsToHoursMinutesSeconds (seconds : Int) -> (Int, Int, Int) {
         return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
     }
-
     
-//    required init?(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//        self.totalTimeInSec = 30
-//    }
+    
+    //    required init?(coder aDecoder: NSCoder) {
+    //        super.init(coder: aDecoder)
+    //        self.totalTimeInSec = 30
+    //    }
 }

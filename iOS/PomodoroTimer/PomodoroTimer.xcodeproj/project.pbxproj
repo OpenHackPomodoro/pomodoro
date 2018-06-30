@@ -14,6 +14,8 @@
 		9F396D6B20E553CD001AB873 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F396D6920E553CD001AB873 /* LaunchScreen.storyboard */; };
 		9F396D7320E6A4F1001AB873 /* Spoqa Han Sans Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F396D7220E6A4C9001AB873 /* Spoqa Han Sans Regular.ttf */; };
 		9F396D8B20E6B692001AB873 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F396D8A20E6B692001AB873 /* Images.xcassets */; };
+		9F396D8D20E6BD10001AB873 /* Spoqa Han Sans Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F396D8C20E6BD10001AB873 /* Spoqa Han Sans Bold.ttf */; };
+		9F396D8F20E6BF11001AB873 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9F396D8E20E6BF11001AB873 /* Montserrat-Bold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		9F396D6C20E553CD001AB873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F396D7220E6A4C9001AB873 /* Spoqa Han Sans Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Spoqa Han Sans Regular.ttf"; path = "../../../../../Downloads/SpoqaHanSans_original/SpoqaHanSans_original/Spoqa Han Sans Regular.ttf"; sourceTree = "<group>"; };
 		9F396D8A20E6B692001AB873 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9F396D8C20E6BD10001AB873 /* Spoqa Han Sans Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Spoqa Han Sans Bold.ttf"; path = "../../../../../Downloads/SpoqaHanSans_original 1/SpoqaHanSans_original/Spoqa Han Sans Bold.ttf"; sourceTree = "<group>"; };
+		9F396D8E20E6BF11001AB873 /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Bold.otf"; path = "../../../../../Downloads/Montserrat-Bold.otf"; sourceTree = "<group>"; };
 		CECB300A3E82E5E6F5517B11 /* Pods-PomodoroTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomodoroTimer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PomodoroTimer/Pods-PomodoroTimer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +89,8 @@
 				9F396D6920E553CD001AB873 /* LaunchScreen.storyboard */,
 				9F396D6420E553CC001AB873 /* Main.storyboard */,
 				9F396D6C20E553CD001AB873 /* Info.plist */,
+				9F396D8C20E6BD10001AB873 /* Spoqa Han Sans Bold.ttf */,
+				9F396D8E20E6BF11001AB873 /* Montserrat-Bold.otf */,
 				9F396D7220E6A4C9001AB873 /* Spoqa Han Sans Regular.ttf */,
 				9F396D8A20E6B692001AB873 /* Images.xcassets */,
 			);
@@ -158,8 +164,10 @@
 			files = (
 				9F396D8B20E6B692001AB873 /* Images.xcassets in Resources */,
 				9F396D7320E6A4F1001AB873 /* Spoqa Han Sans Regular.ttf in Resources */,
+				9F396D8D20E6BD10001AB873 /* Spoqa Han Sans Bold.ttf in Resources */,
 				9F396D6B20E553CD001AB873 /* LaunchScreen.storyboard in Resources */,
 				9F396D6620E553CC001AB873 /* Main.storyboard in Resources */,
+				9F396D8F20E6BF11001AB873 /* Montserrat-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
