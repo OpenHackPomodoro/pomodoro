@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (4.7.2)
+  - DynamicBlurView (2.0.2)
+  - KDCircularProgress (1.5.2)
+  - PopupDialog (0.7.1):
+    - DynamicBlurView (~> 2.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - KDCircularProgress
+  - PopupDialog (~> 0.7)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - DynamicBlurView
+    - KDCircularProgress
+    - PopupDialog
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  DynamicBlurView: aa6db4defc6e537eb86fc5e58dd3991666178399
+  KDCircularProgress: 12f677b2deb02409ab48c6cae1898d146b8ad549
+  PopupDialog: 39598b7d41719f5c025b4b70e62728bae7734fef
+
+PODFILE CHECKSUM: 2ed7dfe5abbee91416173fcc157b6c9b4d7dd209
+
+COCOAPODS: 1.5.3

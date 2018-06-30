@@ -1,0 +1,6 @@
+framework module Pods_PomodoroTimer {
+  umbrella header "Pods-PomodoroTimer-umbrella.h"
+
+  export *
+  module * { export * }
+}
