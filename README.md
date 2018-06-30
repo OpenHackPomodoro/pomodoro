@@ -30,6 +30,7 @@ Pomodoro is a iOS timer app helps you **achieve your own goals** and makes you *
 
 </p>
 <br/><br/><br/>
+
 ## Introduction
 
 ## Features
