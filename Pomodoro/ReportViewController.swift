@@ -16,7 +16,7 @@ class ReportViewController: UIViewController, WKUIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         webView.uiDelegate = self
-        let myurl = URL(string:"http://127.0.0.1:8000")
+        let myurl = URL(string:"http://127.0.0.1:3000")
         let myRequest = URLRequest(url: myurl!)
         webView.load(myRequest)
 
