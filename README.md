@@ -8,7 +8,7 @@
 
 <p align="center">
 	<a href="https://sigoss.github.io/hackathon2018/"><img src="https://img.shields.io/badge/OpenHack-3th-blue.svg"></a>
-	<a href="https://github.com/OpenHackPomodoro/pomodoro/blob/master/LICENSE"><img src="https://img.shields.io/github/license/mashape/apistatus.svg"></a>	
+	<a href="https://github.com/OpenHackPomodoro/pomodoro/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-GPL3-green.svg"></a>	
 </p>
 
 Pomodoro is a iOS timer app helps you **achieve your own goals** and makes you **motivated** by enhance **productivity**.
